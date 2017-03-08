@@ -31,7 +31,7 @@ public class GameView extends JPanel {
 		// djh2-KEC119-21: changed from 30 to 45
 		// djh2-YCPlaptop: change from 45 to 100
 		// dmcclellan: changed speed from 100 to 300
-		this.timer = new Timer(1000 / 300, new ActionListener() {
+		this.timer = new Timer(1000 / 1000, new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -80,8 +80,6 @@ public class GameView extends JPanel {
 			@Override
 			public void run() {
 				Game model = new Game();
-				model.setWidth(640.0);
-				model.setHeight(480.0);
 				
 				//dmclellan: changed square width/height from 40 to 25
 				Square square = new Square();
@@ -89,6 +87,8 @@ public class GameView extends JPanel {
 				square.setY(220.0);
 				square.setWidth(25.0);
 				square.setHeight(25.0);
+				square.setWidth(30.0);
+				square.setHeight(50.0);
 				model.setSquare(square);
 				
 				GameController controller = new GameController();
